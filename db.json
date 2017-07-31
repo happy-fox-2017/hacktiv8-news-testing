@@ -1,0 +1,44 @@
+{
+  "pass": [
+    {
+      "URL": "Test",
+      "username": "Test",
+      "password": "test",
+      "createdAt": "Fri Jul 28 2017 14:23:05 GMT+0700 (WIB)",
+      "updatedAt": "Fri Jul 28 2017 14:23:05 GMT+0700 (WIB)",
+      "id": 1
+    },
+    {
+      "URL": "T0st",
+      "username": "Tost",
+      "password": "123456",
+      "createdAt": "Fri Jul 28 2017 14:24:45 GMT+0700 (WIB)",
+      "updatedAt": "Fri Jul 28 2017 14:24:45 GMT+0700 (WIB)",
+      "id": 2
+    },
+    {
+      "URL": "test",
+      "username": "123",
+      "password": "123",
+      "createdAt": "Fri Jul 28 2017 14:40:38 GMT+0700 (WIB)",
+      "updatedAt": "Fri Jul 28 2017 14:40:38 GMT+0700 (WIB)",
+      "id": 3
+    },
+    {
+      "URL": "test",
+      "username": "test",
+      "password": "12345",
+      "createdAt": "Fri Jul 28 2017 14:52:14 GMT+0700 (WIB)",
+      "updatedAt": "Fri Jul 28 2017 14:52:14 GMT+0700 (WIB)",
+      "id": 4
+    },
+    {
+      "URL": "testlagi",
+      "username": "test",
+      "password": "12345",
+      "createdAt": "Fri Jul 28 2017 14:52:22 GMT+0700 (WIB)",
+      "updatedAt": "Fri Jul 28 2017 14:52:22 GMT+0700 (WIB)",
+      "id": 5
+    }
+  ]
+}
