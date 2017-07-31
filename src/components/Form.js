@@ -1,6 +1,9 @@
 import React, { Component } from 'react'
 import {connect} from 'react-redux'
-import {addPassAsyncHanlder, getPassListAsyncHanlder} from '../actions/passList.js'
+import axios from 'axios'
+import Chance from 'chance'
+
+const chance = new Chance()
 
 class Form extends Component {
   constructor () {
@@ -17,10 +20,10 @@ class Form extends Component {
     this.formChange = this.formChange.bind(this)
     this.passwordVer = this.passwordVer.bind(this)
     this.passwordChange = this.passwordChange.bind(this)
+    this.submitForm = this.submitForm.bind(this)
   }
 
   componentWillMount () {
-    this.props.getPassListAsyncHanlder()
   }
 
   render () {
@@ -73,7 +76,7 @@ class Form extends Component {
               </label>
               <footer className='card-footer'>
                 <button className='button is-primary card-footer-item' onClick={() => {
-                  this.props.addPassAsyncHanlder(this.state.form)
+                  this.submitForm()
                 }}> Submit </button>
               </footer>
             </div>
@@ -117,23 +120,26 @@ class Form extends Component {
         console.log('Event target miss')
     }
   }
+
+  submitForm (event) {
+    let newPass = {...this.state.form,
+      id: chance.guid(),
+      createdAt: new Date().toString(),
+      updatedAt: new Date().toString()}
+    axios.post('http://localhost:3000/pass', newPass)
+    .then((resp) => {
+      console.log(resp.data)
+    })
+    .catch((err) => {
+      console.log(err)
+    })
+  }
 }
 
 const mapStateToProps = (state) => {
   return {
-    passListReducer: state.passListReducer
+    passListReducer: state.passListReducer.passList
   }
 }
 
-const mapDispatchToProps = (dispatch) => {
-  return {
-    addPassAsyncHanlder: (form) => {
-      dispatch(addPassAsyncHanlder(form))
-    },
-    getPassListAsyncHanlder: () => {
-      dispatch(getPassListAsyncHanlder())
-    }
-  }
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(Form)
+export default connect(mapStateToProps)(Form)
