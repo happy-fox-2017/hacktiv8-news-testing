@@ -1,0 +1,10 @@
+a.btn.btn-success {
+  margin: 5px;
+}
+
+
+.btn-danger-delete {
+  color: #fff;
+  background-color: #d9534f;
+  border-color: #d43f3a;
+}

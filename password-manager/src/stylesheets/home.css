@@ -1,0 +1,15 @@
+.table.table.table-striped {
+  margin-top: 0px;
+  text-align: left;
+}
+h2 {
+  margin-top: 30px;
+}
+
+.tdButton {
+  width: 61px;
+}
+
+.col-md-4.col-md-offset-4 {
+  padding-right: 40px;
+}
