@@ -5,11 +5,11 @@ import {expect} from 'chai';
 import TextField from 'material-ui/TextField';
 
 import store from '../store';
-import Form from '../component/Form'
+import FormSearch from '../component/FormSearch'
 
-describe('Form',()=>{
+describe('FormSearch',()=>{
   it('should render div',()=>{
-      const wrapper =shallow(<Form store={store}/>);
+      const wrapper =shallow(<FormSearch store={store}/>);
       expect(wrapper.containsAllMatchingElements([
           <div></div>
       ])).to.be.false
